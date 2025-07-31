@@ -1,0 +1,178 @@
+[gd_scene load_steps=16 format=3 uid="uid://c8xqyrvrb8huj"]
+
+[ext_resource type="Script" uid="uid://cxoeasly88esl" path="res://castle.gd" id="1_val57"]
+[ext_resource type="PackedScene" uid="uid://p2fmob2irrnd" path="res://Assets/castle/gate.fbx" id="1_xtwgx"]
+[ext_resource type="PackedScene" uid="uid://difl3857mjs8f" path="res://Assets/castle/metal-gate.fbx" id="2_e5qb3"]
+[ext_resource type="PackedScene" uid="uid://ctojr1a8741v1" path="res://Assets/castle/tower-slant-roof.fbx" id="8_i8hmi"]
+[ext_resource type="PackedScene" uid="uid://du34rw28falqm" path="res://Assets/castle/tower-square-mid-door.fbx" id="14_ajijg"]
+[ext_resource type="PackedScene" uid="uid://1l1pxig0c0fi" path="res://Assets/castle/tower-square-mid.fbx" id="18_7c1i6"]
+[ext_resource type="PackedScene" uid="uid://bdr2xyyvr4xv3" path="res://Assets/castle/tower-square-top-color.fbx" id="20_hh5jd"]
+[ext_resource type="PackedScene" uid="uid://c25fpw7c1etil" path="res://Assets/castle/wall-corner-half-tower.fbx" id="24_yyh7d"]
+[ext_resource type="PackedScene" uid="uid://dcyxuuckmbwed" path="res://Assets/castle/wall-narrow-gate.fbx" id="32_6rdda"]
+[ext_resource type="PackedScene" uid="uid://d6dc3cxr0xex" path="res://Assets/castle/wall-to-narrow.fbx" id="40_i3rhq"]
+[ext_resource type="PackedScene" uid="uid://7cy7tk12vstd" path="res://Assets/castle/wall.fbx" id="41_8ugi2"]
+[ext_resource type="PackedScene" uid="uid://clbmug1q5wsbi" path="res://Assets/castle/bridge-draw.fbx" id="41_gmte5"]
+[ext_resource type="PackedScene" uid="uid://cpki83dcx5ph0" path="res://Assets/castle/rocks-large.fbx" id="42_npxmu"]
+[ext_resource type="PackedScene" uid="uid://du2f3n80butxa" path="res://Assets/castle/rocks-small.fbx" id="43_ao005"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nmuqh"]
+size = Vector3(3.65, 1.5, 4)
+
+[node name="castle" type="Node3D"]
+script = ExtResource("1_val57")
+
+[node name="gate" parent="." instance=ExtResource("1_xtwgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50503, 0, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="metal-gate" parent="." instance=ExtResource("2_e5qb3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60503, 0, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="metal-gate2" parent="." instance=ExtResource("2_e5qb3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60503, 0.209479, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="tower-slant-roof3" parent="." instance=ExtResource("8_i8hmi")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.75503, 1.2, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="tower-slant-roof4" parent="." instance=ExtResource("8_i8hmi")]
+transform = Transform3D(1.7, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.425866, 1.2, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="tower-square-mid-door2" parent="." instance=ExtResource("14_ajijg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52408, 1.16978, 1.99544)
+metadata/_edit_group_ = true
+
+[node name="tower-square-mid-door5" parent="." instance=ExtResource("14_ajijg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.52408, 2.17, 1.99544)
+metadata/_edit_group_ = true
+
+[node name="tower-square-mid-door3" parent="." instance=ExtResource("14_ajijg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52408, 1.17, -2.00456)
+metadata/_edit_group_ = true
+
+[node name="tower-square-mid-door4" parent="." instance=ExtResource("14_ajijg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.52408, 2.17, -2.00456)
+metadata/_edit_group_ = true
+
+[node name="tower-square-mid2" parent="." instance=ExtResource("18_7c1i6")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.75503, 0, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="tower-square-mid3" parent="." instance=ExtResource("18_7c1i6")]
+transform = Transform3D(1.7, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.42597, 0, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="tower-square-top-color" parent="." instance=ExtResource("20_hh5jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52408, 3.17, -2.00456)
+metadata/_edit_group_ = true
+
+[node name="tower-square-top-color2" parent="." instance=ExtResource("20_hh5jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52408, 3.17, 1.99544)
+metadata/_edit_group_ = true
+
+[node name="wall-corner-half-tower2" parent="." instance=ExtResource("24_yyh7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25503, 0, 1.99544)
+metadata/_edit_group_ = true
+
+[node name="wall-corner-half-tower3" parent="." instance=ExtResource("24_yyh7d")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.25503, 0, -2.00456)
+metadata/_edit_group_ = true
+
+[node name="wall-narrow-gate" parent="." instance=ExtResource("32_6rdda")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25503, 0, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="wall-to-narrow" parent="." instance=ExtResource("40_i3rhq")]
+transform = Transform3D(-0.999998, 0, -0.00174537, 0, 1, 0, 0.00174537, 0, -0.999998, 1.25503, 0, -1.00456)
+metadata/_edit_group_ = true
+
+[node name="wall-to-narrow2" parent="." instance=ExtResource("40_i3rhq")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, 8.74228e-08, 0, 1, 1.25503, 0, 0.99544)
+metadata/_edit_group_ = true
+
+[node name="wall" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.25503, 0, 1.99544)
+metadata/_edit_group_ = true
+
+[node name="wall8" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.737238, 0, 1.99544)
+metadata/_edit_group_ = true
+
+[node name="wall5" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(1, 0, 0, 0, 1.855, 0, 0, 0, 1, -1.52408, 0, 1.05482)
+metadata/_edit_group_ = true
+
+[node name="wall6" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(1, 0, 0, 0, 1.855, 0, 0, 0, 1, -1.52408, 0, -1.04071)
+metadata/_edit_group_ = true
+
+[node name="wall7" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(1, 0, 0, 0, 1.855, 0, 0, 0, 1.125, -1.52408, 0, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="wall3" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.52408, 0, 1.99544)
+metadata/_edit_group_ = true
+
+[node name="wall2" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.25503, 0, -2.00623)
+metadata/_edit_group_ = true
+
+[node name="wall9" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.652838, 0, -2.00623)
+metadata/_edit_group_ = true
+
+[node name="wall4" parent="." instance=ExtResource("41_8ugi2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.52408, 0, -2.00656)
+metadata/_edit_group_ = true
+
+[node name="bridge-draw" parent="." instance=ExtResource("41_gmte5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.75478, 0, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="bridge-draw2" parent="." instance=ExtResource("41_gmte5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75478, 0, -0.00456035)
+metadata/_edit_group_ = true
+
+[node name="rocks-large2" parent="." instance=ExtResource("42_npxmu")]
+transform = Transform3D(0.41774, 0, -0.908567, 0, 0.65, 0, 0.908567, 0, 0.41774, -1.52408, -1.19209e-07, 2.53417)
+metadata/_edit_group_ = true
+
+[node name="rocks-large4" parent="." instance=ExtResource("42_npxmu")]
+transform = Transform3D(-0.418866, 0, -0.908048, 0, 0.65, 0, 0.908048, 0, -0.418866, 1.39112, -1.19209e-07, 2.92714)
+metadata/_edit_group_ = true
+
+[node name="rocks-large5" parent="." instance=ExtResource("42_npxmu")]
+transform = Transform3D(-0.672586, 0, -0.740018, 0, 0.65, 0, 0.740018, 0, -0.672586, 0.843929, -1.19209e-07, 2.51566)
+metadata/_edit_group_ = true
+
+[node name="rocks-large3" parent="." instance=ExtResource("42_npxmu")]
+transform = Transform3D(-0.985541, 0, -0.169436, 0, 0.65, 0, 0.169436, 0, -0.985541, -1.52408, -0.0934075, 2.82257)
+metadata/_edit_group_ = true
+
+[node name="rocks-small" parent="." instance=ExtResource("43_ao005")]
+transform = Transform3D(0.383506, 0, 0.923539, 0, 1, 0, -0.923539, 0, 0.383506, 1.87916, 0, 1.92786)
+metadata/_edit_group_ = true
+
+[node name="rocks-small3" parent="." instance=ExtResource("43_ao005")]
+transform = Transform3D(0.708401, 0, -0.70581, 0, 1.5, 0, 0.70581, 0, 0.708401, -1.52408, -9.53674e-07, 2.66529)
+metadata/_edit_group_ = true
+
+[node name="rocks-small5" parent="." instance=ExtResource("43_ao005")]
+transform = Transform3D(-0.335665, 0, -0.941981, 0, 1.5, 0, 0.941981, 0, -0.335665, 1.07004, -3.57628e-07, 2.60539)
+metadata/_edit_group_ = true
+
+[node name="rocks-small2" parent="." instance=ExtResource("43_ao005")]
+transform = Transform3D(-0.914769, 0, -0.403976, 0, 1, 0, 0.403976, 0, -0.914769, 1.72341, 2.38419e-07, -2.09166)
+metadata/_edit_group_ = true
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.645, 0)
+shape = SubResource("BoxShape3D_nmuqh")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
