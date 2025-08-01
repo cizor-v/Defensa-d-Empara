@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://detvbro7haxku"]
+
+[ext_resource type="Script" uid="uid://qex3lv51xixr" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="PackedScene" uid="uid://daybwjn8hnroy" path="res://Assets/castle/siege-tower.fbx" id="2_4gyqm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4gyqm"]
+size = Vector3(1.565, 3.795, 2.075)
+
+[node name="enemy" type="PathFollow3D"]
+transform = Transform3D(-0.993607, 0.0753219, -0.083692, 0.0776117, 0.996661, -0.0244578, 0.0815704, -0.0307976, -0.99618, 0, 0, 0)
+use_model_front = true
+loop = false
+script = ExtResource("1_4gyqm")
+damage = 20
+
+[node name="siege-tower" parent="." instance=ExtResource("2_4gyqm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22, 0)
+shape = SubResource("BoxShape3D_4gyqm")

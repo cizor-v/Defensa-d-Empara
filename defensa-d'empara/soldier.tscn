@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvy43jwyncuvf"]
+[gd_scene load_steps=4 format=3 uid="uid://casyysub2gtap"]
 
 [ext_resource type="Script" uid="uid://qex3lv51xixr" path="res://enemy.gd" id="1_siw8g"]
+[ext_resource type="PackedScene" uid="uid://bk0ksqqxph0wy" path="res://Assets/characters/character-male-f.fbx" id="2_ba3fx"]
 
-[node name="enemy" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ba3fx"]
+
+[node name="Soldier" type="PathFollow3D"]
+use_model_front = true
+loop = false
 script = ExtResource("1_siw8g")
+damage = 25
+speed = 10
+health = 50
+gold = 10
+score = 100
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_ba3fx")
+
+[node name="character-male-f" parent="." instance=ExtResource("2_ba3fx")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)

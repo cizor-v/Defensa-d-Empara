@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://du2f3n80butxa" path="res://Assets/castle/rocks-small.fbx" id="43_ao005"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nmuqh"]
-size = Vector3(3.65, 1.5, 4)
+size = Vector3(4.31, 1.5, 4)
 
 [node name="castle" type="Node3D"]
 script = ExtResource("1_val57")

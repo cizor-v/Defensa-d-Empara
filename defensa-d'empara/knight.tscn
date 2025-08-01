@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgtmgjgossjht"]
+
+[ext_resource type="Script" uid="uid://qex3lv51xixr" path="res://enemy.gd" id="1_nsuie"]
+[ext_resource type="PackedScene" uid="uid://bdpnl5ra3viit" path="res://Assets/castle/tree-large.fbx" id="1_owtlo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fsrac"]
+size = Vector3(1.15, 2.15, 1.15)
+
+[node name="Knight" type="PathFollow3D"]
+script = ExtResource("1_nsuie")
+damage = 50
+speed = 15
+health = 150
+gold = 30
+score = 500
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_fsrac")
+
+[node name="tree-large" parent="." instance=ExtResource("1_owtlo")]
