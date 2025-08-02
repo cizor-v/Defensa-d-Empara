@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://67uxyllf3ag3"]
+
+[ext_resource type="PackedScene" uid="uid://7t436jkkjsww" path="res://Assets/castle/ground.fbx" id="1_r40rm"]
+[ext_resource type="PackedScene" uid="uid://c8xqyrvrb8huj" path="res://castle.tscn" id="2_6q4t8"]
+
+[sub_resource type="Curve3D" id="Curve3D_8tcn8"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 16, 0, 7.219, 0, 0, 0, 0, 0, 0, -10, 0, 6.759, 0, 0, 0, 0, 0, 0, -10, 0, 3.603, 0, 0, 0, 0, 0, 0, 14, 0, 3.541, 0, 0, 0, 0, 0, 0, 14, 0, -0.069, 0, 0, 0, 0, 0, 0, -6, 0, -0.069, 0, 0, 0, 0, 0, 0, -6, 0, -3.262, 0, 0, 0, 0, 0, 0, 14, 0, -3.416, 0, 0, 0, 0, 0, 0, 14, 0, -6.879, 0, 0, 0, 0, 0, 0, -10, 0, -6.94, 0, 0, 0, 0, 0, 0, -10, 0, -0.014, 0, 0, 0, 0, 0, 0, -14, 0, -0.014),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 12
+
+[node name="Level2" type="Node3D"]
+
+[node name="ground" parent="." instance=ExtResource("1_r40rm")]
+transform = Transform3D(60, 0, 0, 0, 1, 0, 0, 0, 60, 0, 0, 0)
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_8tcn8")
+
+[node name="castle" parent="." instance=ExtResource("2_6q4t8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3431, 0, 0.0166753)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0784591, 0.996917, 0, -0.996917, 0.0784591, 0, 66, 5)
+keep_aspect = 0
+projection = 2
+near = 2.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 85.3567, 0)
+light_energy = 0.703
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_angular_distance = 45.0
+light_specular = 0.0
+shadow_enabled = true
