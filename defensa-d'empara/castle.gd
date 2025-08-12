@@ -1,6 +1,6 @@
 class_name castle extends Node3D
 
-signal health_depleted
+signal playerDeath
 
 var health = 500;
 
@@ -11,4 +11,4 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 		potential_enemy.get_parent().remove_child(potential_enemy)
 		print("castle health: " + str(health))
 		if (health <= 0):
-			health_depleted.emit()
+			playerDeath.emit()

@@ -1,6 +1,6 @@
 class_name enemy extends PathFollow3D
 
-signal health_depleted
+signal enemyDeath
 
 @export var damage = 0
 @export var speed = 20
@@ -9,10 +9,15 @@ signal health_depleted
 @export var gold = 0
 @export var score = 0
 
+func _ready() -> void:
+	enemyDeath.connect(get_parent().get_parent()._on_enemyDeath.bind(gold, score))
+	
+
 func take_damage(dmg: int):
 	health -= dmg * damage_dampen
 	if(health <= 0):
-		health_depleted.emit(gold, score)
+		enemyDeath.emit()
+		get_parent().remove_child(self)
 
 func _process(delta: float) -> void:
 	progress += speed * delta

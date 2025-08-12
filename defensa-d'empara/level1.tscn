@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://xhaka2pw87g8"]
+[gd_scene load_steps=5 format=3 uid="uid://xhaka2pw87g8"]
 
 [ext_resource type="PackedScene" uid="uid://7t436jkkjsww" path="res://Assets/castle/ground.fbx" id="1_jwv3a"]
+[ext_resource type="Script" uid="uid://ci5qy553dx0rx" path="res://gameManager.gd" id="1_ootpb"]
 [ext_resource type="PackedScene" uid="uid://c8xqyrvrb8huj" path="res://castle.tscn" id="3_ootpb"]
 
 [sub_resource type="Curve3D" id="Curve3D_jwv3a"]
@@ -11,6 +12,7 @@ _data = {
 point_count = 18
 
 [node name="level1" type="Node3D"]
+script = ExtResource("1_ootpb")
 
 [node name="ground" parent="." instance=ExtResource("1_jwv3a")]
 transform = Transform3D(60, 0, 0, 0, 1, 0, 0, 0, 60, 0, 0, 0)
@@ -35,3 +37,5 @@ light_volumetric_fog_energy = 0.0
 light_angular_distance = 45.0
 light_specular = 0.0
 shadow_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
