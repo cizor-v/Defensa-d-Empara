@@ -38,8 +38,9 @@ func _on_waveTimeout() -> void:
 	spawnTimer.start()
 	if (currentWave >= maxNbWaves):
 		waveTimer.stop()
-		print("waves stop")
+		print("victory")
 		get_tree().paused = true
+		victoryScreen.display_score()
 		victoryScreen.visible = true
 
 func _on_spawnTimeout() -> void:
@@ -86,4 +87,5 @@ func _on_enemyDeath(enemyGold, enemyScore) -> void:
 func _on_playerDeath() -> void:
 	print("player death")
 	get_tree().paused = true
+	defeatScreen.display_score()
 	defeatScreen.visible = true
