@@ -8,6 +8,7 @@ shader = ExtResource("1_rbj82")
 shader_parameter/lod = 1.0
 
 [node name="VictoryScreen" type="Control"]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 15

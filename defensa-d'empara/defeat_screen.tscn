@@ -8,6 +8,7 @@ shader = ExtResource("1_ilj6y")
 shader_parameter/lod = 1.0
 
 [node name="DefeatScreen" type="Control"]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 15
