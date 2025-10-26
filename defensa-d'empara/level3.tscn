@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dthx8t2yitauc"]
+[gd_scene load_steps=9 format=3 uid="uid://dthx8t2yitauc"]
 
 [ext_resource type="Script" uid="uid://ci5qy553dx0rx" path="res://gameManager.gd" id="1_an40m"]
 [ext_resource type="PackedScene" uid="uid://7t436jkkjsww" path="res://Assets/castle/ground.fbx" id="1_qrujo"]
 [ext_resource type="PackedScene" uid="uid://c8xqyrvrb8huj" path="res://castle.tscn" id="3_an40m"]
+[ext_resource type="PackedScene" uid="uid://bba3yaxwf5oa3" path="res://hud_screen.tscn" id="4_bmsap"]
 [ext_resource type="PackedScene" uid="uid://b8rer57616lh2" path="res://defeat_screen.tscn" id="4_mu84n"]
 [ext_resource type="PackedScene" uid="uid://cjgva2o35g38d" path="res://victory_screen.tscn" id="5_bmsap"]
 [ext_resource type="PackedScene" uid="uid://bs2f3b3vipt8i" path="res://pause_screen.tscn" id="6_mu84n"]
@@ -47,6 +48,8 @@ shadow_enabled = true
 wait_time = 15.0
 
 [node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("4_bmsap")]
 
 [node name="DefeatScreen" parent="." instance=ExtResource("4_mu84n")]
 visible = false

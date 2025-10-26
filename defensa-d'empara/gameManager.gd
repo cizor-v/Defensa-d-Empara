@@ -9,6 +9,9 @@ extends Node3D
 @onready var victoryScreen : Control = $VictoryScreen
 @onready var defeatScreen : Control = $DefeatScreen
 
+# HUD to update
+@onready var hud : Control = $HUD
+
 # gold and score are not instance editable
 var gold : int = 0
 var score : int = 0
@@ -27,6 +30,9 @@ func _ready() -> void:
 	waveTimer.timeout.connect(_on_waveTimeout)
 	waveTimer.start()
 	spawnTimer.timeout.connect(_on_spawnTimeout)
+
+func _process(delta: float) -> void:
+	hud.update_values(gold, score, currentWave, maxNbWaves)
 
 func _on_1secTimeout() -> void:
 	gold += goldPerSec
@@ -79,6 +85,9 @@ func spawnNormalWave() -> void:
 		enemyToSpawn = preload("res://ram.tscn")
 	
 	enemyPath.add_child(enemyToSpawn.instantiate())
+
+func _on_playerHurt(health, max_health) -> void:
+	hud.update_HP(health, max_health)
 
 func _on_enemyDeath(enemyGold, enemyScore) -> void:
 	gold += enemyGold

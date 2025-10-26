@@ -7,7 +7,7 @@
 shader = ExtResource("2_un6tb")
 shader_parameter/lod = 1.0
 
-[node name="Control" type="Control"]
+[node name="PauseScreen" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
