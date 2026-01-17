@@ -31,7 +31,7 @@ func _ready() -> void:
 	waveTimer.start()
 	spawnTimer.timeout.connect(_on_spawnTimeout)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	hud.update_values(gold, score, currentWave, maxNbWaves)
 
 func _on_1secTimeout() -> void:
